@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #444;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container .carta {
+    position: relative;
+    height: 200px;
+}
+
+.container .carta .face {
+    width: 300px;
+    height: 200px;
+    color: #000;
+    transition: .4s;
+}
+
+.container .carta .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.container .carta:hover .face.face1 {
+    opacity: 0;
+    box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #0998e5,
+    inset -20px 0 80px #0998e5,
+    inset 20px 0 300px #0998e5,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #0998e5,
+    10px 0 80px #0ff;
+}
+
+.container .carta .face.face1 .content {
+    opacity: .2;
+    transition: .5s;
+    text-align: center;
+}
+
+.container .carta:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.container .carta .face.face1 .content i {
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+}
+
+.container .carta .face.face1 .content h3 {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
+.container .carta .face.face1 .content a {
+    transition: .5s;
+}
+
+.container .carta .face.face2 {
+    position: relative;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .8);
+    transform: translateY(-200px);
+    color: white;
+}
+
+.container .carta:hover .face.face2 {
+    opacity: 1;
+}
+
+.container .carta .face.face2 .content .content-titulo {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.container .carta .face.face2 .content .content-text {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.container .carta .face.face2 .content button {
+    font-size: 13px;
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    outline: 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+}
+
+.container .carta .face.face2 .content a:hover {
+    background: #333;
+    color: whitesmoke;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, .5);
+}
